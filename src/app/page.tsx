@@ -171,7 +171,7 @@ export default function Home() {
         {caseStudies.map((study, index) => (
           <div
             key={index}
-            className={`flex flex-col bg-white rounded-[10px]  lg:${study.reverse ? 'flex-row-reverse' : 'flex-row'} items-center lg:items-start mb-8 lg:mb-16`}
+            className={`flex flex-col bg-white rounded-[10px]  lg:flex-row ${study.reverse ? 'lg:flex-row-reverse' : ''} items-center lg:items-start mb-8 lg:mb-16`}
           >
             <div className="w-full lg:w-1/2 p-4 order-1 lg:order-none">
               <Image
