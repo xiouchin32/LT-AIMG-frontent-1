@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  color: white;
+  background: #198E8A;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -30,4 +49,21 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.marker-containe {
+  z-index: 10 !important;
+}
+
+.marker {
+  z-index: 10 !important;
+}
+
+.react-calendar__tile--now {
+  background: black !important;
+  color: white !important;
+}
+.react-calendar__tile--active {
+  background: #198E8A !important;
+  color: white !important;
 }
