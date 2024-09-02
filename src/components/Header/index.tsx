@@ -23,24 +23,27 @@ export default function HeaderIndex() {
 
   return (
     <>
-      <header className='w-[100%] h-[60px] lg:w-full fixed top-0 left-1/2 -translate-x-1/2 py-2 px-6 bg-white flex items-center justify-between z-[1102] lg:z-[1100]'>
-        <Link href="/">
-          <Image src={'/logo.svg'} width={150} height={150} alt='Logo' />
-        </Link>
-        {/* Desktop Menu */}
-        <nav className='hidden lg:flex space-x-6'>
-          {menu.map((item, index) => (
-            <a key={index} href={`#${item.text}`} className='text-gray-700 hover:text-gray-900'>
-              {item.text}
-            </a>
-          ))}
-        </nav>
+      <header className='w-full h-[60px] fixed top-0 left-0 py-2 px-6 bg-white flex items-center justify-between z-[1102] lg:z-[1100]'>
+        <div className="max-w-[1023px] w-full mx-auto flex justify-between items-center">
+          <Link href="/">
+            <Image src={'/logo.svg'} width={150} height={150} alt='Logo' />
+          </Link>
 
-        {/* Mobile Menu Toggle */}
-        <div className='lg:hidden'>
-          <button onClick={toggleMenu} aria-label="Toggle Menu">
-            {isOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
-          </button>
+          {/* Desktop Menu */}
+          <nav className='hidden lg:flex space-x-6'>
+            {menu.map((item, index) => (
+              <a key={index} href={`#${item.text}`} className='text-gray-700 hover:text-gray-900'>
+                {item.text}
+              </a>
+            ))}
+          </nav>
+
+          {/* Mobile Menu Toggle */}
+          <div className='lg:hidden'>
+            <button onClick={toggleMenu} aria-label="Toggle Menu">
+              {isOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
+            </button>
+          </div>
         </div>
       </header>
 

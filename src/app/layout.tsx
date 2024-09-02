@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <main className={`flex min-h-screen flex-col items-center justify-between pt-[60px] ${poppins.className}`}>
+        <main className={`flex min-h-screen bg-white flex-col items-center justify-between pt-[60px] ${poppins.className}`}>
           {children}
         </main>
       </body>

@@ -67,3 +67,42 @@ body {
   background: #198E8A !important;
   color: white !important;
 }
+
+.section-title {
+  position: relative;
+  padding-bottom: 20px; /* 這裡的值可根據需要進行調整 */
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 120px; /* 主線的長度 */
+  height: 4px; /* 主線的高度 */
+  background-color: #4dc0b5; /* 主線的顏色 */
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10px;
+  left: 60px;
+  transform: translateX(-50%);
+}
+
+.section-title::before {
+  content: "";
+  display: block;
+  width: 20px; /* 短線的長度 */
+  height: 4px; /* 短線的高度 */
+  background-color: #4dc0b5; /* 短線的顏色 */
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10px; /* 短線相對於主線的距離 */
+  left: 140px;
+  transform: translateX(-50%);
+}
+
+.mySwiper{
+  max-height: 50vh;
+}
+.mySwiper .swiper-slide{
+  display: flex;
+  justify-content: center;
+}
